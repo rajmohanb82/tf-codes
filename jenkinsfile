@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajmohanb82/tf-codes']])
+              	git credentialsID: '74fe0b14-b3e0-4b1a-b1ca-16a4fdaec9b7'
+		checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajmohanb82/tf-codes']])
             }
         }
     
