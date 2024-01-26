@@ -57,7 +57,7 @@ resource "aws_instance" "uipath_instance" {
   ami           = "ami-023c11a32b0207432"  # Replace with the appropriate AMI ID for Red Hat Linux
   instance_type = "m5.2xlarge"  # Replace with the desired instance type
   key_name      = "lx-key-openssh"  # Replace with your key pair name
-  
+  subnet_id      = aws_subnet.uipath_subnet.id
 root_block_device {
     volume_size = 20  # Adjust the root volume size as needed
   }
