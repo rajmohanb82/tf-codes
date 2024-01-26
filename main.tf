@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"  # change this to your preferred AWS region
-  access_key = "AKIAYCSLEHMV6ST2JDS7"
-  secret_key = "dCnT6mcppWX+2BUgAMmPNIICObTRiKQkJOFlVvKU"
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
 }
 
 resource "aws_instance" "ubuntu_instance" {
