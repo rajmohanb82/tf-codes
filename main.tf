@@ -102,6 +102,12 @@ ebs_block_device {
       # For example, if UiPath provides a script for installation, execute it here
       "chmod -R 755 /opt/UiPathAutomationSuite"
     ]
+    connection {
+      host = self.public_ip
+      type        = "ssh"
+      user        = "ec2-user"  # Change this if using a different user for your AMI
+      private_key = file("lx-key-openssh.pem")
+    }
   }
 }
 
